@@ -54,3 +54,4 @@ data/processed/*
 *.hyper
 bi/tableau/*.hyper
 bi/powerbi/*.pbit
+*.db

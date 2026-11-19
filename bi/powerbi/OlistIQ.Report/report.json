@@ -1,0 +1,355 @@
+{
+  "theme": "OlistIQ_Indigo_Design_System",
+  "canvasSize": {
+    "width": 1280,
+    "height": 920
+  },
+  "colorPalette": [
+    "#4338CA",
+    "#6366F1",
+    "#10B981",
+    "#F59E0B",
+    "#EF4444",
+    "#3B82F6",
+    "#8B5CF6",
+    "#64748B"
+  ],
+  "pages": [
+    {
+      "name": "Page_Executive_Overview",
+      "displayName": "1. Executive Overview",
+      "visuals": [
+        {
+          "type": "card",
+          "title": "Gross Merchandise Value (GMV)",
+          "measure": "GMV",
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 220,
+            "h": 110
+          }
+        },
+        {
+          "type": "card",
+          "title": "Total Completed Orders",
+          "measure": "Total Orders",
+          "position": {
+            "x": 260,
+            "y": 80,
+            "w": 220,
+            "h": 110
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average Order Value (AOV)",
+          "measure": "AOV",
+          "position": {
+            "x": 500,
+            "y": 80,
+            "w": 220,
+            "h": 110
+          }
+        },
+        {
+          "type": "card",
+          "title": "On-Time Delivery Rate",
+          "measure": "On-Time Delivery Rate %",
+          "position": {
+            "x": 740,
+            "y": 80,
+            "w": 220,
+            "h": 110
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average CSAT",
+          "measure": "Average CSAT",
+          "position": {
+            "x": 980,
+            "y": 80,
+            "w": 220,
+            "h": 110
+          }
+        },
+        {
+          "type": "lineChart",
+          "title": "Monthly GMV Trend & MoM Velocity",
+          "xAxis": "dim_date[year_month]",
+          "yAxis": [
+            "GMV",
+            "MoM GMV Growth %"
+          ],
+          "position": {
+            "x": 20,
+            "y": 210,
+            "w": 700,
+            "h": 320
+          }
+        },
+        {
+          "type": "donutChart",
+          "title": "Category Revenue Contribution",
+          "legend": "dim_products[category_display_name]",
+          "values": "GMV",
+          "position": {
+            "x": 740,
+            "y": 210,
+            "w": 460,
+            "h": 320
+          }
+        },
+        {
+          "type": "map",
+          "title": "Regional GMV Density by Brazilian State",
+          "location": "dim_customers[state]",
+          "size": "GMV",
+          "position": {
+            "x": 20,
+            "y": 550,
+            "w": 600,
+            "h": 340
+          }
+        },
+        {
+          "type": "barChart",
+          "title": "Top 10 Product Categories by GMV",
+          "category": "dim_products[category_display_name]",
+          "values": "GMV",
+          "position": {
+            "x": 640,
+            "y": 550,
+            "w": 560,
+            "h": 340
+          }
+        }
+      ]
+    },
+    {
+      "name": "Page_Sales_Intelligence",
+      "displayName": "2. Sales Intelligence",
+      "visuals": [
+        {
+          "type": "areaChart",
+          "title": "Product Sales vs Freight Revenue Breakdown",
+          "xAxis": "dim_date[year_month]",
+          "yAxis": [
+            "Product Sales",
+            "Freight Revenue"
+          ],
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 800,
+            "h": 360
+          }
+        },
+        {
+          "type": "table",
+          "title": "Monthly Sales Performance Matrix",
+          "columns": [
+            "dim_date[year_month]",
+            "Total Orders",
+            "Product Sales",
+            "Freight Revenue",
+            "GMV",
+            "AOV",
+            "MoM GMV Growth %"
+          ],
+          "position": {
+            "x": 20,
+            "y": 460,
+            "w": 1180,
+            "h": 400
+          }
+        }
+      ]
+    },
+    {
+      "name": "Page_Customer_Intelligence",
+      "displayName": "3. Customer Intelligence",
+      "visuals": [
+        {
+          "type": "columnChart",
+          "title": "RFM Customer Segment Distribution",
+          "category": "RFM_Segment",
+          "values": "Customer_Count",
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 600,
+            "h": 350
+          }
+        },
+        {
+          "type": "donutChart",
+          "title": "Repeat Buyer vs Single Purchase Share",
+          "legend": "Loyalty_Tier",
+          "values": "Total_Spend",
+          "position": {
+            "x": 640,
+            "y": 80,
+            "w": 560,
+            "h": 350
+          }
+        },
+        {
+          "type": "matrix",
+          "title": "Customer Acquisition Cohort Retention Table",
+          "rows": "Cohort_Month",
+          "columns": "Cohort_Index",
+          "values": "Retention_Rate",
+          "position": {
+            "x": 20,
+            "y": 450,
+            "w": 1180,
+            "h": 420
+          }
+        }
+      ]
+    },
+    {
+      "name": "Page_Logistics_Intelligence",
+      "displayName": "4. Logistics Intelligence",
+      "visuals": [
+        {
+          "type": "barChart",
+          "title": "Average Delivery Duration & Delays by State",
+          "category": "dim_customers[state]",
+          "values": [
+            "Average Delivery Duration Days",
+            "Average Delivery Delay Days"
+          ],
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 700,
+            "h": 380
+          }
+        },
+        {
+          "type": "gauge",
+          "title": "On-Time SLA Delivery Compliance (Target: 95%)",
+          "value": "On-Time Delivery Rate %",
+          "min": 50,
+          "max": 100,
+          "target": 95,
+          "position": {
+            "x": 740,
+            "y": 80,
+            "w": 460,
+            "h": 380
+          }
+        },
+        {
+          "type": "histogram",
+          "title": "Delivery Duration Frequency Distribution (Days)",
+          "xAxis": "delivery_duration_days",
+          "position": {
+            "x": 20,
+            "y": 480,
+            "w": 1180,
+            "h": 380
+          }
+        }
+      ]
+    },
+    {
+      "name": "Page_Product_Seller_Intelligence",
+      "displayName": "5. Product & Seller Intelligence",
+      "visuals": [
+        {
+          "type": "barChart",
+          "title": "Top 25 Marketplace Sellers by GMV",
+          "category": "dim_sellers[seller_id]",
+          "values": "GMV",
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 650,
+            "h": 400
+          }
+        },
+        {
+          "type": "scatterPlot",
+          "title": "Category Price Elasticity & Average Unit Price vs Volume",
+          "x": "Average Item Price",
+          "y": "Units Sold",
+          "details": "dim_products[category_display_name]",
+          "position": {
+            "x": 690,
+            "y": 80,
+            "w": 510,
+            "h": 400
+          }
+        },
+        {
+          "type": "table",
+          "title": "Seller Performance & SLA Compliance Matrix",
+          "columns": [
+            "seller_id",
+            "city",
+            "state",
+            "GMV",
+            "Units Sold",
+            "Seller SLA Compliance %"
+          ],
+          "position": {
+            "x": 20,
+            "y": 500,
+            "w": 1180,
+            "h": 380
+          }
+        }
+      ]
+    },
+    {
+      "name": "Page_Customer_Experience",
+      "displayName": "6. Customer Experience",
+      "visuals": [
+        {
+          "type": "columnChart",
+          "title": "Review Score Distribution (1-5 Stars)",
+          "category": "fact_reviews[review_score]",
+          "values": "Total Reviews",
+          "position": {
+            "x": 20,
+            "y": 80,
+            "w": 550,
+            "h": 350
+          }
+        },
+        {
+          "type": "columnChart",
+          "title": "Impact of Late Delivery on CSAT Rating",
+          "category": "Delivery_Status (On-Time vs Late)",
+          "values": "Average CSAT",
+          "position": {
+            "x": 590,
+            "y": 80,
+            "w": 610,
+            "h": 350
+          }
+        },
+        {
+          "type": "table",
+          "title": "Category Satisfaction League Table (Highest to Lowest CSAT)",
+          "columns": [
+            "category_display_name",
+            "Total Reviews",
+            "Average CSAT",
+            "Negative Review Rate %"
+          ],
+          "position": {
+            "x": 20,
+            "y": 450,
+            "w": 1180,
+            "h": 420
+          }
+        }
+      ]
+    }
+  ]
+}

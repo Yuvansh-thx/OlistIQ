@@ -1,0 +1,6 @@
+payment_type,transaction_count,orders_count,total_value,avg_value,median_value,avg_installments,value_share_pct,transaction_share_pct
+credit_card,76795,76505,12542084.19,163.32,106.87,3.5,78.34,73.92
+boleto,19784,19784,2869361.27,145.03,93.89,1.0,17.92,19.04
+voucher,5775,3866,379436.87,65.7,39.28,1.0,2.37,5.56
+debit_card,1529,1528,217989.79,142.57,89.3,1.0,1.36,1.47
+not_defined,3,3,0.0,0.0,0.0,1.0,0.0,0.0

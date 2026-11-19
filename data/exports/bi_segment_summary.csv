@@ -1,0 +1,11 @@
+rfm_segment,customer_count,total_revenue,avg_recency_days,avg_frequency,avg_monetary,customer_pct,revenue_pct
+Lost Customers,29132,5315923.46,318.6,1.0,182.48,30.49,33.78
+Potential Loyalists,22530,5312582.46,96.9,1.0,235.8,23.58,33.76
+About to Sleep,18463,2998440.02,322.9,1.0,162.4,19.32,19.05
+Loyal Customers,2594,811646.67,230.6,2.05,312.89,2.71,5.16
+Hibernating,8020,431804.3,480.1,1.0,53.84,8.39,2.74
+New Recent Customers,7342,397329.71,49.3,1.0,54.12,7.68,2.52
+Promising,7229,392107.43,142.0,1.0,54.24,7.56,2.49
+Champions,124,69473.57,96.5,3.54,560.27,0.13,0.44
+At Risk,91,5956.9,413.8,2.04,65.46,0.1,0.04
+Need Attention,35,2403.0,220.5,2.0,68.66,0.04,0.02

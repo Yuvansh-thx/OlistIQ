@@ -1,0 +1,6 @@
+review_score,sentiment,review_count,percentage
+5,Positive,57328,57.78
+4,Positive,19142,19.29
+3,Neutral,8179,8.24
+2,Negative,3151,3.18
+1,Negative,11424,11.51

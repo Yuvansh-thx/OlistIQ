@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" source-build="2024.1.0" source-platform="mac" version="18.1" xml:base="http://www.tableausoftware.com/xml/user">
+  <preferences>
+    <color-palette name="OlistIQ_Indigo" type="regular">
+      <color>#4338CA</color>
+      <color>#6366F1</color>
+      <color>#10B981</color>
+      <color>#F59E0B</color>
+      <color>#EF4444</color>
+      <color>#3B82F6</color>
+      <color>#8B5CF6</color>
+      <color>#64748B</color>
+    </color-palette>
+  </preferences>
+  <datasources>
+    <datasource caption="Monthly Sales &amp; GMV (OlistIQ)" inline="true" name="federated.monthly_sales" version="18.1">
+      <connection class="federated" directory="/Users/shivanshyadav/Desktop/Data Analytics Project/OSlit/data/exports" filename="bi_monthly_sales.csv"/>
+      <column caption="Governed GMV (R$)" datatype="real" name="[Calculation_GMV]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="SUM([total_gmv])"/>
+      </column>
+      <column caption="MoM Growth %" datatype="real" name="[Calculation_MoM_Growth]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="ZN(([Calculation_GMV] - LOOKUP([Calculation_GMV], -1)) / ABS(LOOKUP([Calculation_GMV], -1))) * 100"/>
+      </column>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Executive_GMV_Trend">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Category_Pareto_Donut">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Customer_RFM_Distribution">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Delivery_SLA_State_Map">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Seller_League_Table">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="CSAT_Distribution_Delay_Impact">
+      <table>
+        <view>
+          <datasources/>
+        </view>
+        <panes>
+          <pane>
+            <view/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="1_Executive_Overview">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="Executive_GMV_Trend" type-v2="widget" w="50000" x="0" y="10000"/>
+          <zone h="88000" id="11" name="Category_Pareto_Donut" type-v2="widget" w="50000" x="50000" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="2_Sales_Intelligence">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="Executive_GMV_Trend" type-v2="widget" w="100000" x="0" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="3_Customer_Intelligence">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="Customer_RFM_Distribution" type-v2="widget" w="100000" x="0" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="4_Logistics_Intelligence">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="Delivery_SLA_State_Map" type-v2="widget" w="100000" x="0" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="5_Product_Seller_Intelligence">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="Seller_League_Table" type-v2="widget" w="50000" x="0" y="10000"/>
+          <zone h="88000" id="11" name="Category_Pareto_Donut" type-v2="widget" w="50000" x="50000" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name="6_Customer_Experience">
+      <style/>
+      <size maxheight="900" maxwidth="1400" minheight="900" minwidth="1400" sizing-mode="fixed"/>
+      <zones>
+        <zone h="100000" id="1" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone h="8000" id="2" type-v2="title" w="100000" x="0" y="0"/>
+          <zone h="88000" id="10" name="CSAT_Distribution_Delay_Impact" type-v2="widget" w="100000" x="0" y="10000"/>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+</workbook>

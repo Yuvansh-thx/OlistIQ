@@ -1,0 +1,93 @@
+{
+  "diagnostics": {
+    "sample_size_months": 20,
+    "augmented_dickey_fuller": {
+      "adf_statistic": -2.2667,
+      "p_value": 0.1829,
+      "is_stationary_5pct": false,
+      "interpretation": "Series demonstrates non-stationarity with upward growth trend."
+    },
+    "autocorrelation_lags_1_to_4": [
+      0.762,
+      0.682,
+      0.535,
+      0.403
+    ]
+  },
+  "leaderboard": [
+    {
+      "model_name": "3-Month Moving Average",
+      "metrics": {
+        "mae": 70202.21,
+        "rmse": 72802.46,
+        "mape_pct": 6.78
+      },
+      "predictions": [
+        1096130.68,
+        1096130.68,
+        1096130.68,
+        1096130.68
+      ]
+    },
+    {
+      "model_name": "SARIMAX (1,1,0)",
+      "metrics": {
+        "mae": 104279.94,
+        "rmse": 118925.94,
+        "mape_pct": 10.23
+      },
+      "predictions": [
+        1154508.8,
+        1155351.78,
+        1154943.4,
+        1155141.24
+      ]
+    },
+    {
+      "model_name": "Naive Drift Baseline",
+      "metrics": {
+        "mae": 105542.53,
+        "rmse": 119900.19,
+        "mape_pct": 10.35
+      },
+      "predictions": [
+        1156248.89,
+        1156248.89,
+        1156248.89,
+        1156248.89
+      ]
+    },
+    {
+      "model_name": "Holt-Winters Exp Smoothing",
+      "metrics": {
+        "mae": 322692.84,
+        "rmse": 345984.61,
+        "mape_pct": 31.38
+      },
+      "predictions": [
+        1275220.13,
+        1340672.84,
+        1406125.56,
+        1471578.28
+      ]
+    }
+  ],
+  "test_actuals": [
+    1145686.46,
+    1020381.9,
+    1039783.58,
+    996973.51
+  ],
+  "test_periods": [
+    "2018-05",
+    "2018-06",
+    "2018-07",
+    "2018-08"
+  ],
+  "future_projections": {
+    "2018-09": 1011701.88,
+    "2018-10": 978581.46,
+    "2018-11": 945461.03
+  },
+  "validation_caveat": "Caution: Olist historical dataset covers only 20 consecutive months. Time series of this length have insufficient statistical degrees of freedom to capture multi-year seasonality (e.g. Black Friday surges). Model forecasts should be treated as directional trend extrapolations rather than deterministic budgets."
+}

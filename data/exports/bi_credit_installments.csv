@@ -1,0 +1,6 @@
+installment_bucket,transaction_count,total_value,avg_value,pct_share
+7 - 10 Installments,11866,3961173.99,333.83,31.58
+2 - 3 Installments,22876,3070575.46,134.23,24.48
+4 - 6 Installments,16257,2947693.72,181.32,23.5
+1 Installment (Single),25455,2440445.43,95.87,19.46
+11+ Installments,341,122195.59,358.34,0.97
