@@ -679,6 +679,8 @@
         document.getElementById('view-' + id).classList.add('hidden');
       });
       document.getElementById('view-' + tabId).classList.remove('hidden');
+      if (tabId === 'exec') renderAreaChart();
+      if (tabId === 'cx') renderForecastChart();
     }
 
     // Render Area Trend Chart
@@ -948,6 +950,11 @@
       populateCsatBars();
       populateTables();
       renderForecastChart();
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get('tab');
+      if (tab && document.getElementById('view-' + tab)) {
+        switchTab(tab);
+      }
     });
 
     window.addEventListener('resize', () => {

@@ -101,18 +101,35 @@ pytest tests/ -v
 
 ---
 
-## 7. Dashboards & BI Assets
-All three platforms mirror the **6 Governed Dashboard Pages** inspired by the modern Indigo/Slate design benchmark:
-1. **Executive Overview**
-2. **Sales Intelligence**
-3. **Customer Intelligence (RFM & Cohorts)**
-4. **Logistics Intelligence (SLA & Transit Times)**
-5. **Product & Seller Intelligence**
-6. **Customer Experience (CSAT & Sentiment)**
+## 7. Dashboards, Live Web Preview & Screenshots
+
+🌐 **Live Interactive Web Dashboard**: [https://yuvansh-thx.github.io/OlistIQ/](https://yuvansh-thx.github.io/OlistIQ/)
+
+All three BI platforms (and the interactive web preview) mirror the **6 Governed Dashboard Pages** inspired by the modern Indigo/Slate design benchmark:
 
 * **Power BI**: Open [`bi/powerbi/OlistIQ.pbip`](bi/powerbi/OlistIQ.pbip) directly in Power BI Desktop.
 * **Tableau**: Open [`bi/tableau/OlistIQ_Analytics.twb`](bi/tableau/OlistIQ_Analytics.twb) in Tableau Desktop or Tableau Public.
 * **Looker Studio**: Follow the step-by-step instructions in [`docs/looker_studio_guide.md`](docs/looker_studio_guide.md).
+
+### Dashboard Screenshots
+
+#### 1. Executive Overview
+![Executive Overview Dashboard](docs/screenshots/01_executive_overview.png)
+
+#### 2. Sales Intelligence
+![Sales Intelligence Dashboard](docs/screenshots/02_sales_intelligence.png)
+
+#### 3. Customer Intelligence (RFM & Retention)
+![Customer Intelligence Dashboard](docs/screenshots/03_customer_intelligence.png)
+
+#### 4. Logistics Intelligence (SLA & Regional Transit)
+![Logistics Intelligence Dashboard](docs/screenshots/04_logistics_intelligence.png)
+
+#### 5. Product & Seller Intelligence (Category Pareto)
+![Product & Seller Intelligence Dashboard](docs/screenshots/05_product_sellers.png)
+
+#### 6. Customer Experience & Sales Forecasting
+![Customer Experience & Forecasting Dashboard](docs/screenshots/06_csat_forecasting.png)
 
 ---
 
