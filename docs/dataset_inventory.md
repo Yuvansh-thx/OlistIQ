@@ -1,7 +1,7 @@
 # OlistIQ Dataset Inventory & Raw Validation Report
 
 - **Dataset Source**: `olistbr/brazilian-ecommerce` (Kaggle)
-- **Download Timestamp (UTC)**: `2026-11-19T16:13:46.642134+00:00`
+- **Download Timestamp (UTC)**: `2026-11-19T16:19:24.735165+00:00`
 - **Source Cache**: `/Users/shivanshyadav/.cache/kagglehub/datasets/olistbr/brazilian-ecommerce/versions/2`
 - **Local Raw Target**: `/Users/shivanshyadav/Desktop/Data Analytics Project/OSlit/data/raw`
 - **Validated Expected Files**: 9 / 9
